@@ -1,0 +1,100 @@
+.product-block {
+   @include flex-row;
+   gap: 52px;
+   margin-bottom: 104px;
+   padding-top: 47px;
+
+   &__inner {
+      @include flex-column;
+      width: 100%
+   }
+
+   &__top {
+      margin-bottom: 28px
+   }
+
+   &__list {
+      @include flex-row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+   }
+
+   &__pagination {
+      @include flex-row;
+      justify-content: end;
+      gap: 10px;
+   }
+}
+
+.item-product {
+   @include flex-column;
+   margin-bottom: 70px;
+
+   &__img-block {
+      position: relative;
+      @include flex-row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 11px;
+      width: 258px;
+      height: 300px;
+      background: $grayBgColor;
+   }
+
+   &__image {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+   }
+
+   &__btn-block {
+      position: absolute;
+      bottom: 10px;
+      @include flex-row;
+      gap: 53px;
+      justify-content: center;
+      width: 100%;
+   }
+
+   &__cart-link,
+   &__liked-link {
+      width: 35px;
+      height: 35px;
+      padding-top: 11px;
+      padding-left: 7px;
+      border-radius: 3px;
+      background: $whiteColor50;
+
+      & img {
+         width: 20px;
+         height: 20px;
+      }
+
+   }
+
+   &__link {
+      margin-bottom: 7px;
+      font-size: 16px;
+      line-height: 16px;
+   }
+
+   &__price {
+      @include flex-row;
+      gap: 17px;
+
+      & span {
+         font-weight: 700;
+         font-size: 18px;
+         line-height: 16px;
+         color: $brandColor;
+      }
+
+      & .old-price {
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 16px;
+         color: $grayTextInputColor;
+      }
+   }
+}

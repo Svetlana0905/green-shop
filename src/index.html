@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html', {
+'title': 'Главная'
+})
+
+<body>
+
+  @@include('html/components/header.html', {})
+  <main class="page">
+    @@include('html/components/firstScreen-block.html', {})
+    <div class="product-block container">
+      @@include('html/components/aside-block.html', {})
+      @@include('html/components/product-block.html', {})
+    </div>
+    @@include('html/components/preview-block.html', {})
+    @@include('html/components/blog-block.html', {})
+    @@include('html/components/info-block.html', {})
+
+  </main>
+  @@include('html/components/footer.html', {})
+
+  @@include('html/components/script.html', {})
+</body>
+
+</html>

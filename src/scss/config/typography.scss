@@ -1,0 +1,69 @@
+.title {
+   font-weight: 900;
+   font-size: 24px;
+   line-height: 29px;
+   text-transform: uppercase;
+
+   @include media(600) {
+      font-size: 70px;
+      line-height: 70px;
+   }
+}
+
+.subtitle {
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 16px;
+}
+
+.caption {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 26px;
+   color: $primaryColor;
+}
+
+.text-uppercase {
+   font-weight: 500;
+   font-size: 11px;
+   line-height: 16px;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+
+   @include media(600) {
+      font-size: 14px;
+      line-height: 16px;
+   }
+}
+
+.text-body1 {
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 18px;
+   color: $secondaryColor;
+
+   @include media(600) {
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+}
+
+.text-body2 {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 22px;
+   color: $secondaryColor;
+}
+
+.text-body3 {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 24px;
+   text-align: center;
+   color: $secondaryColor;
+}
+
+.text-brand-color {
+   color: $brandColor;
+}

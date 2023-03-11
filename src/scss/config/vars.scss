@@ -1,0 +1,36 @@
+$minWidth: 320px; // минимальная ширина телефона
+$maxWidthContainer: 1220px; // ширина контейнера с учетом padding слева и справа
+
+$whiteColor: #fff;
+$whiteColor50: rgba(255, 255, 255, .5);
+$primaryColor: rgba(61, 61, 61, 1);
+$primaryColor20: rgba(61, 61, 61, .02);
+$secondaryColor: rgba(114, 114, 114, 1);
+$brandColor: rgba(70, 163, 88, 1);
+$brandColor50: rgba(70, 163, 88, 0.5);
+$brandColor30: rgba(70, 163, 88, 0.3);
+
+$grayColor: rgb(111, 111, 111);
+$lightBlueColor: #4086F4;
+$darkBlueColor: #3B5999;
+$grayTextInputColor: rgba(165, 165, 165, 1);
+$grayBgColor: rgba(251, 251, 251, 1);
+
+$borderColor: rgba(234, 234, 234, 1);
+$secondaryBorderColor: rgba(234, 234, 234, 1);
+
+$fontFamily: 'CeraPro', sans-serif; // Семейство шрифта по умолчанию
+$fontColor: $primaryColor; // Цвет шрифта по умолчанию
+$fontSize: 14px; // Размер шрифта по умолчанию
+$fontWeight: 400; // Жирность шрифта по умолчанию
+
+$mainRadius: 6px;
+
+$greenBorderBottom: 0.3px solid rgba(70, 163, 88, 0.5);
+$buttonLinerGradient: linear-gradient(180deg, rgba(70, 163, 88, 0.4) -16.92%, #46A358 109.23%);
+$bgLinerGradient: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+
+$standartTrans: all 280ms ease-in-out 0ms;
+
+$greenBtnBoxShadow: 0px 10px 20px rgba(70, 163, 88, 0.3);
+$darkBtnBoxShadow: 0px 10px 20px #D3D3D3;

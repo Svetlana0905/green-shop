@@ -1,0 +1,24 @@
+.first-screen {
+   @include flex-row;
+   position: relative;
+   background: $bgLinerGradient;
+
+   &__content {
+      @include flex-column;
+      width: 50%;
+      padding: 68px 0 0 43px;
+   }
+
+   & .text-body1 {
+      margin-bottom: 42px;
+   }
+
+   & .text-uppercase {
+      margin-bottom: 4px;
+   }
+
+   & .title {
+      margin-left: -2px;
+      margin-bottom: 8px;
+   }
+}

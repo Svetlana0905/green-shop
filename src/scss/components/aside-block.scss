@@ -1,0 +1,88 @@
+.aside {
+   @include flex-column;
+   max-width: 310px;
+   width: 100%;
+   height: fit-content;
+   background: $grayBgColor;
+
+   &__inner {
+      padding: 14px 23px 0 19px;
+   }
+
+   &__subtitle {
+      margin-bottom: 7px;
+   }
+
+   &__subtitle-price {
+      margin-bottom: 24px;
+   }
+
+   &__price-block {
+      padding-left: 13px;
+      margin-bottom: 46px;
+   }
+
+   &__list {
+      margin-bottom: 36px;
+   }
+
+   &__price {
+      font-size: 15px;
+      line-height: 16px;
+      margin-bottom: 16px;
+
+      & span {
+         color: $brandColor;
+         font-weight: 700;
+      }
+   }
+}
+
+.list-aside {
+   @include flex-column;
+   padding-left: 13px;
+
+   & li {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__item,
+   & span {
+      font-size: 15px;
+      line-height: 40px;
+
+      &:hover,
+      &:hover+span {
+         font-weight: 700;
+         color: $brandColor;
+      }
+   }
+}
+
+.sale-aside {
+   text-align: center;
+   background: url(../images/aside/sale_bg.jpg) center/cover;
+
+   &__title {
+      font-family: 'Hanged_Letters';
+      font-weight: 400;
+      font-size: 65px;
+      line-height: 65px;
+      color: $brandColor;
+      margin-bottom: 11px;
+   }
+
+   &__text {
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 16px;
+   }
+
+   &__image {
+      width: 100%;
+      height: 370px;
+      margin-top: -10px;
+      object-fit: cover;
+   }
+}

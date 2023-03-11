@@ -1,0 +1,17 @@
+.header {
+  max-width: 1220px;
+  padding: 26px 10px 15px;
+  width: 100%;
+  margin: 0 auto;
+  @include flex-row;
+  justify-content: space-between;
+  align-items: end;
+  border-bottom: $greenBorderBottom;
+  margin-bottom: 12px;
+
+  &__left-block {
+    @include flex-row;
+    align-items: center;
+    gap: 29px;
+  }
+}

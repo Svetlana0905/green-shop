@@ -1,0 +1,54 @@
+.serch-form {
+   position: relative;
+
+   &__search-label {
+      @include flex-row;
+      position: relative;
+   }
+
+   &__input {
+      display: block;
+      padding: 5px 9px;
+      font-size: 16px;
+      line-height: 20px;
+      border-radius: $mainRadius;
+      border: 1px solid transparent;
+      background: url(../images/icons/search_icon.svg) right no-repeat;
+      transition: box-shadow 280ms ease-in-out 0ms,
+         border 280ms ease-in-out 0ms;
+
+      &:hover {
+         border: 1px solid $brandColor;
+         box-shadow: $greenBtnBoxShadow;
+         background: $whiteColor;
+      }
+
+      &:active,
+      &:focus {
+         border: 1px solid $brandColor;
+         background: $whiteColor;
+         box-shadow: $darkBtnBoxShadow;
+      }
+   }
+
+   &__clear-btn {
+      position: absolute;
+      top: 6px;
+      right: 1px;
+      width: 20px;
+      height: 20px;
+      transform: scale(0);
+      z-index: -1;
+      background: $whiteColor url(../images/icons/delete_btn.svg) center/13px 13px no-repeat;
+      transition: $standartTrans;
+
+      &.active {
+         transform: scale(1);
+         z-index: 2;
+      }
+   }
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+   -webkit-appearance: none;
+}

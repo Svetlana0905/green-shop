@@ -1,0 +1,8 @@
+.header-navigation {
+   padding-left: 148px;
+
+   &__list {
+      @include flex-row;
+      gap: 50px;
+   }
+}

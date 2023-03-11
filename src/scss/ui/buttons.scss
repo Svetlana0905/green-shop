@@ -1,0 +1,33 @@
+.login-button {
+   position: relative;
+   padding: 0px 18px 0px 40px;
+   text-align: end;
+   font-family: $fontFamily;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 35px;
+   color: $whiteColor;
+   background: $brandColor;
+   border-radius: $mainRadius;
+
+   &::after {
+      position: absolute;
+      top: 6px;
+      left: 18px;
+      width: 20px;
+      height: 20px;
+      content: '';
+      background: url(../images/icons/logout.svg) center no-repeat;
+   }
+}
+
+.small-button {
+   padding: 8px 25px 7px;
+   font-family: $fontFamily;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 20px;
+   color: $whiteColor;
+   background: $brandColor;
+   border-radius: $mainRadius;
+}

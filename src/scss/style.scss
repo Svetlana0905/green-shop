@@ -1,0 +1,39 @@
+@use 'sass:math';
+
+// Подключение шрифтов локально из папки "./src/fonts" 
+@import 'config/fonts';
+
+// Подключение переменных 
+@import 'config/vars';
+
+// Общие стили
+@import 'config/base';
+
+// Подключение sass функций и миксинов и рассширений стилей 
+@import 'config/functions';
+@import 'config/mixins';
+
+// Обнуление 
+@import 'config/reset';
+
+// Библиотеки
+// @import 'libs/aos';
+@import 'libs/sliderFirstScreen';
+@import 'libs/nouislider';
+
+// Подключение стилей отдельных блоков и секций 
+@import 'config/typography';
+@import 'ui/headerNavigation';
+@import 'ui/searchForm';
+@import 'ui/inputs';
+@import 'ui/links';
+@import 'ui/buttons';
+@import 'ui/formProduct';
+@import 'components/header';
+@import 'components/first-screen-block';
+@import 'components/aside-block';
+@import 'components/product-block';
+@import 'components/preview-block';
+@import 'components/blog-block';
+@import 'components/info-block';
+@import 'components/footer';

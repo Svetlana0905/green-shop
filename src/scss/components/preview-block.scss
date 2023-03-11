@@ -1,0 +1,78 @@
+.preview {
+   @include flex-row;
+   gap: 30px;
+   margin-bottom: 121px;
+
+   &__item {
+      @include flex-row;
+      max-width: 586px;
+      width: 100%;
+      position: relative;
+   }
+
+   &__content {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include flex-column;
+      align-items: end;
+      justify-content: end;
+      padding-right: 28px;
+      padding-bottom: 46px;
+   }
+
+   &__bg {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 250px;
+      background: $primaryColor20;
+      pointer-events: none;
+   }
+
+   &__title {
+      max-width: 150px;
+      margin-bottom: 8px;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: right;
+      text-transform: uppercase;
+      color: $primaryColor;
+   }
+
+   &__text {
+      max-width: 292px;
+      margin-bottom: 23px;
+      text-align: end;
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   &__image {
+      & img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &__link-button {
+      width: 140px;
+      padding: 9px 0px 11px 28px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: $whiteColor;
+      text-transform: none;
+
+      &::after {
+         position: absolute;
+         right: 26px;
+         top: 12px;
+         content: '';
+         width: 18px;
+         height: 18px;
+         background: url(../images/icons/arrow_right.svg) center/cover;
+      }
+   }
+}

@@ -1,0 +1,26 @@
+:root {
+   --swiper-theme-color: #46A358;
+}
+
+.slider-first {
+   margin-right: -1px;
+   width: 49%;
+
+   &__slide {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 100%;
+
+      & img {
+         max-width: 507px;
+         max-height: 450px;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__pagination {
+      padding-bottom: 5px;
+   }
+}
