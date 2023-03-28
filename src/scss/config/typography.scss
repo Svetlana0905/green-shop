@@ -46,7 +46,6 @@
       font-size: 14px;
       line-height: 24px;
    }
-
 }
 
 .text-body2 {
@@ -62,6 +61,18 @@
    line-height: 24px;
    text-align: center;
    color: $secondaryColor;
+}
+
+.text-body4 {
+   font-weight: 400;
+   font-size: 13px;
+   line-height: 22px;
+   color: $secondaryColor;
+}
+
+.footer-text {
+   font-size: 14px;
+   line-height: 30px;
 }
 
 .text-brand-color {

@@ -1,4 +1,5 @@
-import { isWebp, activeLink, clearSearchInput, showClearBtn } from './modules';
+import { isWebp, activeLink, clearSearchInput, showClearBtn, openPopUpActions, closePopUpActions } from './modules';
+import { formBtn } from './helpers/elementsNodeList'
 import Swiper, { Pagination, EffectFlip } from 'swiper';
 import noUiSlider from 'nouislider'
 
@@ -8,6 +9,12 @@ isWebp()
 activeLink()
 clearSearchInput()
 showClearBtn()
+openPopUpActions();
+closePopUpActions()
+
+formBtn.addEventListener('click', function (e) {
+   e.preventDefault()
+})
 
 const swiperFirstScreen = new Swiper(".slider-first", {
    modules: [Pagination, EffectFlip],

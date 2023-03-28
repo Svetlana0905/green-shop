@@ -55,24 +55,4 @@
          height: 100%;
       }
    }
-
-   &__link-button {
-      width: 140px;
-      padding: 9px 0px 11px 28px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 20px;
-      color: $whiteColor;
-      text-transform: none;
-
-      &::after {
-         position: absolute;
-         right: 26px;
-         top: 12px;
-         content: '';
-         width: 18px;
-         height: 18px;
-         background: url(../images/icons/arrow_right.svg) center/cover;
-      }
-   }
 }

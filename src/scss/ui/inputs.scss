@@ -1,0 +1,30 @@
+.primary-input {
+   padding: 8px 0 10px 11px;
+   width: 100%;
+   border: 1px solid transparent;
+   border-top-left-radius: $mainRadius;
+   border-bottom-left-radius: $mainRadius;
+   font-size: 16px;
+   color: $primaryColor;
+   background: $whiteColor;
+   box-shadow: $lightBtnBoxShadow;
+   transition: box-shadow 280ms ease-in-out 0ms, border-color 300ms ease-in-out 0ms;
+
+   &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $placeholderColor;
+   }
+
+   &:hover,
+   &:focus,
+   &:active {
+      box-shadow: $darkBtnBoxShadow;
+   }
+
+   &:focus,
+   &:active {
+      border-color: $brandColor;
+   }
+}

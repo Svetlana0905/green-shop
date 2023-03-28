@@ -1,0 +1,59 @@
+.info-block {
+   @include flex-row;
+   justify-content: space-between;
+   background: $grayBgColor;
+   padding-right: 25px;
+   padding-left: 23px;
+
+   &__content-inner {
+      @include flex-row;
+      gap: 31px;
+      height: 248px;
+      padding-top: 25px;
+      padding-bottom: 24px;
+   }
+
+   &__title {
+      margin-bottom: 9px;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 16px;
+      color: $primaryColor;
+   }
+
+   &__item {
+      @include flex-column;
+      justify-content: flex-end;
+      max-width: 204px;
+      width: 100%;
+
+      & img {
+         width: 40%;
+         margin-bottom: 15px;
+         object-fit: cover;
+      }
+   }
+
+   &__item+&__item {
+      max-width: 235px;
+      width: 100%;
+      padding-left: 31px;
+      border-left: 1px solid $brandColor30;
+   }
+}
+
+.form-info {
+   @include flex-column;
+   justify-content: flex-end;
+   max-width: 354px;
+   padding-bottom: 34px;
+
+   & .subtitle {
+      margin-bottom: 18px;
+   }
+
+   &__mail-form {
+      @include flex-row;
+      margin-bottom: 17px;
+   }
+}

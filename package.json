@@ -21,6 +21,7 @@
     "scss",
     "html"
   ],
+  "homepage": "https://svetlana0905.github.io/green-shop",
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/polyfill": "^7.12.1",

@@ -23,7 +23,9 @@
 
 // Подключение стилей отдельных блоков и секций 
 @import 'config/typography';
+
 @import 'ui/headerNavigation';
+@import 'ui/popup';
 @import 'ui/searchForm';
 @import 'ui/inputs';
 @import 'ui/links';
@@ -37,3 +39,18 @@
 @import 'components/blog-block';
 @import 'components/info-block';
 @import 'components/footer';
+
+.disable-scroll {
+   position: relative;
+   overflow: hidden;
+   height: 100vh;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   scrollbar-gutter: stable;
+}
+
+// .disable-scroll {
+//    scrollbar-gutter: stable;
+// }

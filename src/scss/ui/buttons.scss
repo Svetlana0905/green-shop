@@ -1,14 +1,16 @@
 .login-button {
    position: relative;
-   padding: 0px 18px 0px 40px;
+   padding: 0px 16px 0px 41px;
+   border: 1px solid $brandColor;
    text-align: end;
    font-family: $fontFamily;
    font-weight: 500;
    font-size: 16px;
-   line-height: 35px;
+   line-height: 33px;
    color: $whiteColor;
    background: $brandColor;
    border-radius: $mainRadius;
+   transition: $standartTrans;
 
    &::after {
       position: absolute;
@@ -22,12 +24,122 @@
 }
 
 .small-button {
-   padding: 8px 25px 7px;
+   position: relative;
+   width: 90px;
+   height: 35px;
+   border: 1px solid transparent;
+   border-radius: $mainRadius;
    font-family: $fontFamily;
    font-weight: 700;
    font-size: 16px;
    line-height: 20px;
    color: $whiteColor;
    background: $brandColor;
-   border-radius: $mainRadius;
+   transition: $standartTrans;
+
+   &::before {
+      position: absolute;
+      pointer-events: none;
+      right: 0px;
+      bottom: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      border: 1px solid $brandColor;
+      border-radius: $mainRadius;
+      background: transparent;
+      transition: $standartTrans;
+   }
+
+   &:hover {
+      box-shadow: $hoverBtnBoxShadow;
+   }
+
+   &:hover::before {
+      border-color: $whiteColor;
+      transform: rotate(180deg);
+   }
+
+   &:focus,
+   &:active {
+      border-color: $whiteColor;
+      box-shadow: 0px 4px 10px 2px rgba($primaryColor, 42%);
+   }
+}
+
+.form-btn {
+   position: relative;
+   height: 40px;
+   padding: 0 26px 0 25px;
+   border: 1px solid $brandColor;
+   border-top-right-radius: $mainRadius;
+   border-bottom-right-radius: $mainRadius;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 16px;
+   color: $whiteColor;
+   background: $brandColor;
+}
+
+.login-button,
+.form-btn {
+   &::before {
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 100%;
+      height: 100%;
+      content: '';
+      border: 1px solid $brandColor;
+      border-radius: $mainRadius;
+      background: transparent;
+      transform: scale(0);
+      transition: $standartTrans;
+   }
+
+   &:hover {
+      border-color: $whiteColor;
+      box-shadow: $hoverBtnBoxShadow;
+   }
+
+   &:focus,
+   &:active {
+      border-color: $whiteColor;
+      box-shadow: 0px 5px 12px 2px rgba(0, 0, 0, 0.3) inset, 0px 4px 10px 2px rgba($primaryColor, 50%);
+
+      &::before {
+         top: 0;
+         left: 0;
+         transform: scale(1);
+      }
+   }
+}
+
+.popup__btn-close {
+   position: absolute;
+   top: 9px;
+   right: 6px;
+   width: 24px;
+   height: 24px;
+   background: transparent;
+
+   &::before,
+   &::after {
+      position: absolute;
+      content: '';
+      width: 17px;
+      height: 1px;
+      background: $brandColor;
+      top: 50%;
+      left: 0;
+   }
+
+   &::before {
+      transform: rotate(45deg);
+   }
+
+   &::after {
+      transform: rotate(135deg);
+   }
 }

@@ -1,4 +1,13 @@
-import { html, list, clearBtnInputSearch, inputSearch } from './../helpers/elementsNodeList'
+import {
+  html,
+  body,
+  list,
+  clearBtnInputSearch,
+  inputSearch,
+  popUp,
+  openPopUp,
+  closePopUp,
+} from './../helpers/elementsNodeList'
 
 // logger (Full Logging System)
 function FLS(message) {
@@ -44,11 +53,58 @@ function clearSearchInput() {
     clearBtnInputSearch.classList.remove('active')
   })
 }
+// Popup
+let disableScroll = function () {
+  let paddingOffset = window.innerWidth - body.offsetWidth + 'px';
+  body.style.paddingRight = paddingOffset;
+  let pagePosition = window.scrollY;
+  body.classList.add('disable-scroll');
+  body.dataset.position = pagePosition;
+  body.style.top = -pagePosition + 'px';
+}
+
+let enableScroll = function () {
+  let pagePosition = parseInt(body.dataset.position, 10);
+  body.style.top = 'auto';
+  body.classList.remove('disable-scroll');
+  window.scroll({ top: pagePosition, left: 0 });
+  body.removeAttribute('data-position');
+  body.style.paddingRight = '0px';
+}
+
+function openPopUpActions() {
+  if (openPopUp !== null) {
+    openPopUp.addEventListener('click', function (e) {
+      e.preventDefault();
+      disableScroll();
+      popUp.classList.add('active')
+    })
+  }
+}
+
+
+popUp.addEventListener('click', (e) => {
+  if (e.target == popUp) {
+    popUp.classList.remove('active');
+  }
+});
+
+
+function closePopUpActions() {
+  console.log(closePopUp)
+  closePopUp.addEventListener('click', function (e) {
+    e.preventDefault();
+    enableScroll();
+    popUp.classList.remove('active')
+  })
+}
 
 export {
   FLS,
   isWebp,
   activeLink,
   clearSearchInput,
-  showClearBtn
+  showClearBtn,
+  openPopUpActions,
+  closePopUpActions
 }

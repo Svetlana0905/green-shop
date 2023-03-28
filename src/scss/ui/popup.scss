@@ -1,0 +1,174 @@
+.popup {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+   overflow-y: auto;
+   overflow-x: hidden;
+   transition: $longTrans;
+   background-color: rgba(0, 0, 0, 0.4);
+   z-index: 10;
+
+   &.active {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   &__container {
+      margin: 0 auto;
+      position: relative;
+      transition: $longTrans;
+      opacity: 0;
+      transform: $transormPopupStart;
+   }
+
+   &.active &__container {
+      transform: $transormPopupAnd;
+      opacity: 1;
+   }
+
+   &__login-link {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 16px;
+      color: $primaryColor;
+      background: transparent;
+
+      &.active {
+         color: $brandColor;
+      }
+   }
+
+   &__body {
+      @include flex-column;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
+      padding: 50px 58px;
+      background: $whiteColor;
+      border-bottom: 5px solid $brandColor;
+      z-index: 11;
+   }
+
+   &__top {
+      @include flex-row;
+      gap: 12px;
+      margin-bottom: 53px;
+   }
+
+   &__enter-text,
+   &__login-with-text {
+      font-size: 13px;
+      line-height: 16px;
+      color: $primaryColor;
+   }
+
+   &__enter-text {
+      width: 300px;
+      margin-bottom: 15px;
+   }
+
+   &__login-with-text {
+      position: relative;
+      display: block;
+      width: 100%;
+      margin-bottom: 27px;
+      text-align: center;
+
+      &::before {
+         position: absolute;
+         bottom: 5px;
+         left: 0;
+         content: '';
+         width: 100%;
+         height: 1px;
+         background: $borderColor;
+      }
+
+      & span {
+         position: relative;
+         background: $whiteColor;
+         padding: 0 5px;
+      }
+   }
+
+   &__google,
+   &__facebook {
+      position: relative;
+      width: 300px;
+      height: 40px;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: center;
+      color: $secondaryColor;
+      border: 1px solid $borderColor;
+   }
+
+   &__google {
+      margin-bottom: 15px;
+
+      & span {
+         padding-left: 31px;
+         background: url(../images/icons/google.svg) 0 0/20px 20px no-repeat;
+      }
+   }
+
+   &__facebook {
+      & span {
+         line-height: 40px;
+         padding-left: 24px;
+         background: url(../images/icons/facebook_icon.svg) 0 0/20px 20px no-repeat;
+      }
+   }
+}
+
+.form-popup {
+   @include flex-column;
+   align-items: end;
+   padding-bottom: 46px;
+
+   &__input-email,
+   &__input-password {
+      width: 300px;
+      height: 40px;
+      margin-bottom: 17px;
+      padding-left: 14px;
+      border: 1px solid $borderColor;
+      border-radius: 5px;
+
+      &::placeholder {
+         font-size: 14px;
+         line-height: 16px;
+         color: $grayTextInputColor;
+      }
+   }
+
+   &__input-password {
+      margin-bottom: 14px;
+   }
+
+   &__forgot-pass {
+      margin-bottom: 29px;
+   }
+
+   &__button {
+      @include flex-row;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 45px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+      color: $whiteColor;
+      background: #46A358;
+   }
+}

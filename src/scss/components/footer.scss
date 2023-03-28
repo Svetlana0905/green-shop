@@ -1,1 +1,152 @@
-.footer {}
+.footer {
+   &__top {
+      @include flex-row;
+      padding: 24px 0 21px 23px;
+      border-bottom: 1px solid $brandColor30;
+      border-top: 1px solid $brandColor30;
+      background: $brandColor10;
+   }
+
+   &__copyright {
+      padding: 7px;
+      text-align: center;
+   }
+}
+
+.top-footer {
+
+   &__address,
+   &__mail,
+   &__phone {
+      position: relative;
+   }
+
+   &__address {
+      max-width: 176px;
+      margin-left: 116px;
+   }
+
+   &__mail {
+      padding-top: 9px;
+      margin-left: 90px;
+   }
+
+   &__phone {
+      margin-left: 103px;
+      padding-top: 9px;
+   }
+
+   &__address::after {
+      position: absolute;
+      top: 13px;
+      left: -26px;
+      width: 14px;
+      height: 16px;
+      content: '';
+      background: url(../images/icons/point_icon.svg) center/cover no-repeat;
+   }
+
+   &__mail::after {
+      position: absolute;
+      top: 11px;
+      left: -29px;
+      width: 18px;
+      height: 18px;
+      content: '';
+      background: url(../images/icons/message.svg) center/cover no-repeat;
+   }
+
+   &__phone::after {
+      position: absolute;
+      top: 12px;
+      left: -29px;
+      width: 20px;
+      height: 19px;
+      content: '';
+      background: url(../images/icons/calling.svg) center/cover no-repeat;
+   }
+}
+
+.bottom-footer {
+   @include flex-row;
+   padding: 32px 0 27px 23px;
+   border-bottom: 1px solid $brandColor30;
+   background: $grayBgColor;
+
+   &__account,
+   &__categories,
+   &__helper,
+   &__social {
+      @include flex-column;
+      gap: 7px;
+   }
+
+   &__list {
+      @include flex-column;
+   }
+
+   &__helper {
+      margin-left: 167px;
+   }
+
+   &__categories {
+      margin-left: 140px;
+   }
+
+   &__social {
+      margin-left: 173px;
+   }
+}
+
+.social {
+
+   &__list {
+      @include flex-row;
+      gap: 9px;
+      padding-top: 12px;
+      margin-bottom: 26px;
+   }
+
+   &__subtitle {
+      margin-bottom: 6px;
+   }
+
+   &__item {
+      display: block;
+      width: 31px;
+      height: 31px;
+      border: 1px solid rgba(70, 163, 88, 0.2);
+      border-radius: 4px;
+
+      &:focus,
+      &:active {
+         border: 1px solid $primaryColor60;
+         box-shadow: $darkBtnBoxShadow;
+      }
+
+      &:hover {
+         border: 1px solid $brandColor;
+         box-shadow: $greenBtnBoxShadow;
+      }
+
+      &.facebook-link {
+         background: url(../images/icons/facebook.svg) center/8px 16px no-repeat, $whiteColor;
+      }
+
+      &.instagram-link {
+         background: url(../images/icons/instagram.svg) center/16px 16px no-repeat, $whiteColor;
+      }
+
+      &.twitter-link {
+         background: url(../images/icons/twitter.svg) center/16px 13px no-repeat, $whiteColor;
+      }
+
+      &.linkedin-link {
+         background: url(../images/icons/linkedin.svg) center/16px 15px no-repeat, $whiteColor;
+      }
+
+      &.union-link {
+         background: url(../images/icons/union.svg) center/19px 14px no-repeat, $whiteColor;
+      }
+   }
+}

@@ -5,19 +5,37 @@
    font-size: 16px;
    line-height: 20px;
    color: $primaryColor;
+   transition: $standartTrans;
 
-   &.active {
-      font-weight: 700;
-      position: relative;
+   &::after {
+      position: absolute;
+      height: 0;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: $brandColor;
+      transition: bottom 280ms ease-in-out 0ms;
+   }
+
+   &.active,
+   &:focus {
+      text-shadow: $primaryTextShadow;
 
       &::after {
-         position: absolute;
          height: 3px;
          width: 100%;
          bottom: -17px;
-         left: 0;
-         content: '';
-         background: $brandColor;
+      }
+   }
+
+   &:hover {
+      color: $brandColor;
+
+      &::after {
+         height: 1px;
+         width: 100%;
+         bottom: -15px;
       }
    }
 }
@@ -26,6 +44,7 @@
    position: relative;
    width: 30px;
    height: 25px;
+   border-radius: 5px;
 
    &__quantity {
       position: absolute;
@@ -40,12 +59,38 @@
       color: $whiteColor;
       background: $brandColor;
    }
+
+   &:focus,
+   &:hover {
+      box-shadow: $darkBtnBoxShadow;
+   }
 }
 
-.link-button {
+.preview__link-button {
+   font-weight: 500;
+   font-size: 14px;
+   text-transform: none;
+
+   &::after {
+      position: absolute;
+      right: 26px;
+      top: 12px;
+      content: '';
+      width: 18px;
+      height: 18px;
+      background: url(../images/icons/arrow_right.svg) center/cover;
+   }
+}
+
+.link-button,
+.preview__link-button {
    position: relative;
-   padding: 11px 26px 9px;
-   width: fit-content;
+   @include flex-row;
+   align-items: center;
+   justify-content: center;
+   width: 140px;
+   height: 40px;
+   border: 1px solid $brandColor;
    border-radius: $mainRadius;
    font-family: $fontFamily;
    font-weight: 700;
@@ -54,6 +99,34 @@
    text-transform: uppercase;
    color: $whiteColor;
    background: $brandColor;
+
+   &:focus,
+   &:active {
+      border: 1px solid $primaryColor60;
+      box-shadow: $focusBtnBoxShadow;
+   }
+
+   &:hover {
+      border: 1px solid $whiteColor;
+      box-shadow: $hoverBtnBoxShadow;
+   }
+}
+
+.preview__link-button {
+   padding-right: 21px;
+   font-weight: 500;
+   font-size: 14px;
+   text-transform: none;
+
+   &::after {
+      position: absolute;
+      right: 26px;
+      top: 12px;
+      content: '';
+      width: 18px;
+      height: 18px;
+      background: url(../images/icons/arrow_right.svg) center/cover;
+   }
 }
 
 .pagination-link {
@@ -62,7 +135,7 @@
    justify-content: center;
    width: 35px;
    height: 35px;
-   border: 1px solid $secondaryBorderColor;
+   border: 1px solid $borderColor;
    border-radius: 4px;
    text-align: center;
    font-family: $fontFamily;
@@ -84,6 +157,7 @@
    font-size: 14px;
    line-height: 16px;
    color: $primaryColor;
+   transition: $standartTrans;
 
    &::after {
       position: absolute;
@@ -97,12 +171,60 @@
       mask-image: url(../images/icons/read_more_icon.svg);
    }
 
-   &:hover {
+   &:focus,
+   &:active {
       color: $brandColor;
+      text-shadow: $greenTextShadow;
+      border-bottom: 1px solid $brandColor;
+
+      &::after {
+         background-color: $brandColor;
+      }
    }
 
-   &:hover::after {
-      background-color: $brandColor;
+   &:hover {
+      color: $darkBlueColor;
+      border-bottom: 1px solid $darkBlueColor;
+
+      &::after {
+         background-color: $darkBlueColor;
+      }
+
+   }
+}
+
+.bottom-footer__item-link {
+   position: relative;
+   font-size: 14px;
+   line-height: 30px;
+
+   &::before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 1px;
+      bottom: -30px;
+      background: $brandColor;
+      transition: $standartTrans;
+   }
+
+   &:focus {
+      padding: 5px;
+      border-radius: 5px;
+      text-shadow: $greenTextShadow;
+      box-shadow: $smallLinkBoxShadow;
+   }
+
+   &:hover,
+   &:active {
+      color: $brandColor;
+      text-shadow: $greenTextShadow;
+
+      &::before {
+         width: 100%;
+         left: 0;
+         bottom: 0;
+      }
    }
 }
 
